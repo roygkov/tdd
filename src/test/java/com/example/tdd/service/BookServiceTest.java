@@ -14,13 +14,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class BookServiceTest {
+class BookServiceTest {
 
   @Mock
   private BookRepository repository;
 
   @Test
-  public void test_retrieveAll() {
+  void test_retrieveAll() {
     // given
     final BookService service = new BookService(repository);
     final List<Book> allBooks = BoolUtil.getAllBooks();
